@@ -9,7 +9,9 @@ public class ExecutorDeJugades
     }
 
     private void DonarIdAlsJugador(Pandilla pandilla)
-    {
-        
-    }
+        =>
+        pandilla
+        .Cast<Jugador>()
+        .ToList()
+        .ForEach(jugador => jugador.AlgoritmeSpoof.SetIdJugador(Guid.NewGuid().ToString()));
 }

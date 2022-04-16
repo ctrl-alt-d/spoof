@@ -19,6 +19,7 @@ public class ElementsManegador
         var algoritmes = _ProporcionadorDalgoritmes.DonamAlgoritmes();
         var pandilla = _CreadorDePandilla.CreaPandilla(algoritmes);
         _ExecutorDeJugades.FesJugar(pandilla);
+        return pandilla;
     }
 
     
