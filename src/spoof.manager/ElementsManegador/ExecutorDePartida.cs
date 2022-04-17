@@ -1,6 +1,6 @@
-namespace spoof.manager.ElementsManegador;
+namespace Spoof.Manager.ElementsManegador;
 
-using spoof.manager.ElementsDelJoc;
+using Spoof.Manager.ElementsDelJoc;
 public class ExecutorDePartida
 {
     private readonly PoliciaDeTrols _PoliciaDeTrols;

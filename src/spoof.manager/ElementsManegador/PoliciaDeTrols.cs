@@ -1,6 +1,6 @@
-using spoof.manager.ElementsDelJoc;
+using Spoof.Manager.ElementsDelJoc;
 
-namespace spoof.manager.ElementsManegador;
+namespace Spoof.Manager.ElementsManegador;
 
 public class PoliciaDeTrols
 {

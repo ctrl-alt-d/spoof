@@ -1,8 +1,8 @@
-namespace spoof.manager.ElementsDelJoc;
+namespace Spoof.Manager.ElementsDelJoc;
 
 using System.Collections;
 using System.Linq;
-using spoof.abstrats;
+using Spoof.Abstrats;
 
 public class Pandilla : IPandilla
 {

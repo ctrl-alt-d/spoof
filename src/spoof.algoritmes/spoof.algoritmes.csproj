@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\spoof.abstrats\spoof.abstrats.csproj" />
+    <ProjectReference Include="..\Spoof.Abstrats\Spoof.Abstrats.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

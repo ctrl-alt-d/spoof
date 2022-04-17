@@ -1,6 +1,6 @@
-using spoof.abstrats;
+using Spoof.Abstrats;
 
-namespace spoof.algoritmes;
+namespace Spoof.Algoritmes;
 
 public class AlgoritmeRandom : IAlgoritmeSpoof
 {

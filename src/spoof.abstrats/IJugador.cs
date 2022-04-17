@@ -1,4 +1,4 @@
-namespace spoof.abstrats;
+namespace Spoof.Abstrats;
 
 public interface IJugador
 {

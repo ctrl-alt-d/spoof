@@ -1,6 +1,6 @@
-namespace spoof.manager.ElementsManegador;
-using spoof.algoritmes;
-using spoof.abstrats;
+namespace Spoof.Manager.ElementsManegador;
+using Spoof.Algoritmes;
+using Spoof.Abstrats;
 public class ProporcionadorDalgoritmes
 {
     public IEnumerable<IAlgoritmeSpoof> DonamAlgoritmes()

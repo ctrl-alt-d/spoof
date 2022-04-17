@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spoof.manager", "spoof.manager\spoof.manager.csproj", "{8D733BAB-F06C-406E-807C-64EBE6DE564E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spoof.Manager", "Spoof.Manager\Spoof.Manager.csproj", "{8D733BAB-F06C-406E-807C-64EBE6DE564E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spoof.abstrats", "spoof.abstrats\spoof.abstrats.csproj", "{56A7D3A1-3064-4A8D-9C37-3015089185F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spoof.Abstrats", "Spoof.Abstrats\Spoof.Abstrats.csproj", "{56A7D3A1-3064-4A8D-9C37-3015089185F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spoof.exe.console", "spoof.exe.console\spoof.exe.console.csproj", "{A90D48EC-A49A-4870-A2DB-04A1BB54301C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spoof.Exe.Console", "Spoof.Exe.Console\Spoof.Exe.Console.csproj", "{A90D48EC-A49A-4870-A2DB-04A1BB54301C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E6891B59-9BBD-4240-9375-833FDC12A411}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.spoof.manager.ElementsDelJoc", "Tests\Test.spoof.manager.ElementsDelJoc\Test.spoof.manager.ElementsDelJoc.csproj", "{1A7761D7-59C2-49D4-A002-DAED218E355C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Spoof.Manager.ElementsDelJoc", "Tests\Test.Spoof.Manager.ElementsDelJoc\Test.Spoof.Manager.ElementsDelJoc.csproj", "{1A7761D7-59C2-49D4-A002-DAED218E355C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,5 +1,5 @@
-namespace spoof.manager.ElementsManegador;
-using spoof.abstrats;
+namespace Spoof.Manager.ElementsManegador;
+using Spoof.Abstrats;
 
 public class ElementsManegador
 {

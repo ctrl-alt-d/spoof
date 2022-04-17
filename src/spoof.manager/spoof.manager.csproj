@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\spoof.abstrats\spoof.abstrats.csproj" />
-    <ProjectReference Include="..\spoof.algoritmes\spoof.algoritmes.csproj" />
+    <ProjectReference Include="..\Spoof.Abstrats\Spoof.Abstrats.csproj" />
+    <ProjectReference Include="..\Spoof.Algoritmes\Spoof.Algoritmes.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

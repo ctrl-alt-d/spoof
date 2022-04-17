@@ -1,6 +1,6 @@
-namespace spoof.manager.ElementsDelJoc;
+namespace Spoof.Manager.ElementsDelJoc;
 
-using spoof.abstrats;
+using Spoof.Abstrats;
 
 public class Jugador : IJugador
 {

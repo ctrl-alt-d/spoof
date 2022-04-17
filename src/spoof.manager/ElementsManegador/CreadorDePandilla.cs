@@ -1,7 +1,7 @@
-namespace spoof.manager.ElementsManegador;
-using spoof.algoritmes;
-using spoof.manager.ElementsDelJoc;
-using spoof.abstrats;
+namespace Spoof.Manager.ElementsManegador;
+using Spoof.Algoritmes;
+using Spoof.Manager.ElementsDelJoc;
+using Spoof.Abstrats;
 
 public class CreadorDePandilla
 {

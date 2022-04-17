@@ -1,11 +1,11 @@
 using Xunit;
-using spoof.manager.ElementsDelJoc;
+using Spoof.Manager.ElementsDelJoc;
 using Moq;
-using spoof.abstrats;
+using Spoof.Abstrats;
 using System.Linq;
 using FluentAssertions;
 
-namespace Test.spoof.manager.ElementsDelJoc;
+namespace Test.Spoof.Manager.ElementsDelJoc;
 
 public class EsPotIterarPelsJugadorsDelIPandilla
 {
