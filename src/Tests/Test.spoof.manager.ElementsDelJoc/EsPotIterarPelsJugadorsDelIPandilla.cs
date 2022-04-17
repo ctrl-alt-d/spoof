@@ -14,8 +14,8 @@ public class EsPotIterarPelsJugadorsDelIPandilla
     {
         // -- Giving
         var algoritmeSpoof = Mock.Of<IAlgoritmeSpoof>();
-        var jugador1 = new Jugador(algoritmeSpoof);
-        var jugador2 = new Jugador(algoritmeSpoof);
+        var jugador1 = new Mock<Jugador>(algoritmeSpoof).Object;
+        var jugador2 = new Mock<Jugador>(algoritmeSpoof).Object;
         var pandilla = new Pandilla( new [] {jugador1, jugador2} );
 
         // -- When
