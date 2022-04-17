@@ -2,8 +2,8 @@ namespace spoof.abstrats;
 
 public interface IJugador
 {
-    int? EnPronostica { get; }
-    int? EnPortava { get; }
+    int? CrecQueEnTotalHiHaura { get; }
+    int? GetEnPorto();
     int PartidesGuanyades { get; }
     bool? GuanyaLaRonda {get; }
 }

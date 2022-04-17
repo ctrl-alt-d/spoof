@@ -8,18 +8,29 @@ public class Jugador : IJugador
     {
         AlgoritmeSpoof = algoritmeSpoof;
     }
-    public string IdJugador = Guid.NewGuid().ToString();
-    public int? EnPronostica 
+    public void NetejaDades()
+    {
+        PotMostrarLaMa = false;
+        GuanyaLaRonda = false;
+        EnPorto = null;
+        CrecQueEnTotalHiHaura = null;
+    }
+    public void PosaMonedesAlaMa()
         =>
-        Pronostic?.CrecQueEnTotalHiHaura;
+        EnPorto = AlgoritmeSpoof.PosaMonedesAlaMa();
+    internal int? EnPorto {get; private set;}
+    public int? CrecQueEnTotalHiHaura {get; private set;}    
+    public void FesPronostic(Pandilla pandilla)
+        =>
+        CrecQueEnTotalHiHaura = AlgoritmeSpoof.FesPronostic(pandilla);
+    public string IdJugador = Guid.NewGuid().ToString();
     public bool PotMostrarLaMa {get; set;}
-    public int? EnPortava 
+    public int? GetEnPorto() 
         =>
         PotMostrarLaMa ?
-        Pronostic?.EnPorto :
+        EnPorto :
         null;
     public int PartidesGuanyades { get; internal set; }
     internal IAlgoritmeSpoof AlgoritmeSpoof { get; }
-    internal Pronostic? Pronostic { get; set; }
     public bool? GuanyaLaRonda {get; set; }
 }

@@ -3,64 +3,62 @@ namespace spoof.manager.ElementsManegador;
 using spoof.manager.ElementsDelJoc;
 public class ExecutorDePartida
 {
+    private readonly PoliciaDeTrols _PoliciaDeTrols;
 
+    public ExecutorDePartida(PoliciaDeTrols policiaDeTrols)
+    {
+        _PoliciaDeTrols = policiaDeTrols;
+    }
     public void FesJugar(Pandilla pandilla)
     {
+        // Jugadors es preparen
         MarcarIniciDePartida(pandilla);
+
+        // Posen les monedes al puny tancat
+        PosaMonedesAlesMans(pandilla);
+
+        // Passa la poli per si algú fa el trol
+        _PoliciaDeTrols.DetectarTrols(pandilla);
+
+        // Demanem pronòstic
         DemanarPronostic(pandilla);
-        var trols = DetectarTrols(pandilla);
-        EliminarElsTrols(pandilla, trols);
+
+        // Determinem el guanyador
         var total_monedes = RecompteMonedes(pandilla);
         var guanyador = DeterminaGuanyador(pandilla, total_monedes);
+
+        // Sumem punt al guanyador i informem als jugadors del final de la ronda
         InformaGuanyador(pandilla, guanyador);
     }
-
     public void MarcarIniciDePartida(Pandilla pandilla)
         =>
         pandilla
             .Jugadors
-            .ForEach(jugador => {
-                jugador.PotMostrarLaMa = false;
-                jugador.GuanyaLaRonda = false;
-            });
-
+            .ForEach(jugador => jugador.NetejaDades());
     public void DemanarPronostic(Pandilla pandilla)
         =>
         pandilla
         .Jugadors
         .ForEach(jugador => 
-            jugador.Pronostic = jugador.AlgoritmeSpoof.FesPronostic(pandilla)
+            jugador.FesPronostic(pandilla)
         );
-
-    public IEnumerable<Jugador> DetectarTrols(Pandilla pandilla)
+    public void PosaMonedesAlesMans(Pandilla pandilla)
         =>
         pandilla
         .Jugadors
-        .Where(JugadorFaElTroll);
-    
-    public bool JugadorFaElTroll(Jugador jugador)
-        =>
-        jugador.Pronostic.EnPorto > 3 ||
-        jugador.Pronostic.EnPorto < 0;
-
-    public void EliminarElsTrols(Pandilla pandilla, IEnumerable<Jugador> trols)
-        =>
-        trols
-        .ToList()
-        .ForEach(trol => pandilla.Jugadors.Remove(trol));
-
+        .ForEach(jugador => 
+            jugador.PosaMonedesAlaMa()
+        );
     public int RecompteMonedes(Pandilla pandilla)
         =>
         pandilla
         .Jugadors
-        .Sum(jugador => jugador.Pronostic.EnPorto);
-
+        .Sum(jugador => jugador.EnPorto!.Value);
     public Jugador? DeterminaGuanyador(Pandilla pandilla, int resposta_correcte)
         =>
         pandilla
         .Jugadors
-        .FirstOrDefault(jugador=>jugador.Pronostic.EnPorto == resposta_correcte);
-
+        .FirstOrDefault(jugador=>jugador.EnPorto == resposta_correcte);
     public void InformaGuanyador(Pandilla pandilla, Jugador? guanyador)
     {
         // Sumar un punt al guanyador
@@ -71,12 +69,10 @@ public class ExecutorDePartida
         }
 
         // Ja poden obrir la ma
-        // Marcar qui guanya la ronda
         pandilla
             .Jugadors
             .ForEach(jugador => {
                 jugador.PotMostrarLaMa = true;
-                jugador.GuanyaLaRonda = true;
             });
 
         // Avisar als algoritmes que la ronda ha acabat
