@@ -3,15 +3,34 @@ namespace spoof.manager.ElementsManegador;
 using spoof.manager.ElementsDelJoc;
 public class ExecutorDeJugades
 {
-    public void FesJugar(Pandilla pandilla)
+    private readonly ExecutorDePartida _ExecutorDePartida;
+
+    public ExecutorDeJugades(ExecutorDePartida executorDePartida)
     {
-        DonarIdAlsJugador(pandilla);
+        _ExecutorDePartida = executorDePartida;
     }
 
+    public void FesJugar(Pandilla pandilla, int num_partides)
+    {
+        DonarIdAlsJugador(pandilla);    
+        Enumerable
+            .Range(0,num_partides)
+            .Select(_ => pandilla)
+            .ToList()
+            .ForEach( _ExecutorDePartida.FesJugar );
+    }
     private void DonarIdAlsJugador(Pandilla pandilla)
         =>
         pandilla
-        .Cast<Jugador>()
-        .ToList()
-        .ForEach(jugador => jugador.AlgoritmeSpoof.SetIdJugador(Guid.NewGuid().ToString()));
+        .Jugadors
+        .ForEach(
+            DonarIdAlJugador
+        );
+
+    private static void DonarIdAlJugador(Jugador jugador)
+        =>
+        jugador
+        .AlgoritmeSpoof
+        .SetIdJugador(jugador.IdJugador);
+
 }

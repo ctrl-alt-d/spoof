@@ -8,10 +8,11 @@ public class Jugador : IJugador
     {
         AlgoritmeSpoof = algoritmeSpoof;
     }
+    public string IdJugador = Guid.NewGuid().ToString();
     public int? EnPronostica 
         =>
         Pronostic?.CrecQueEnTotalHiHaura;
-    private bool PotMostrarLaMa {get; set;}
+    public bool PotMostrarLaMa {get; set;}
     public int? EnPortava 
         =>
         PotMostrarLaMa ?

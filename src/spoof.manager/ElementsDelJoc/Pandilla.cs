@@ -6,7 +6,7 @@ using spoof.abstrats;
 
 public class Pandilla : IPandilla
 {
-    private List<Jugador> _Jugadors = new();
+    public List<Jugador> Jugadors = new();
 
     public Pandilla(IEnumerable<Jugador> jugadors)
         =>
@@ -22,11 +22,11 @@ public class Pandilla : IPandilla
 
     internal void AfegirJugador(Jugador jugador)
         =>
-        _Jugadors.Add(jugador);
+        Jugadors.Add(jugador);
 
     internal void TornPassaAlSeguent()
         =>
-        Torn = (Torn + 1) % _Jugadors.Count;
+        Torn = (Torn + 1) % Jugadors.Count;
 
     public IEnumerator<IJugador> GetEnumerator()
         =>
@@ -36,7 +36,7 @@ public class Pandilla : IPandilla
     IEnumerator IEnumerable.GetEnumerator()
         =>
         Array.Empty<Jugador>()
-        .Concat(_Jugadors.Skip(Torn))
-        .Concat(_Jugadors.Take(Torn - 1))
+        .Concat(Jugadors.Skip(Torn))
+        .Concat(Jugadors.Take(Torn - 1))
         .GetEnumerator();
 }
