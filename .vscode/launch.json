@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/src/spoof.exe.console/bin/Debug/net6.0/spoof.exe.console.dll",
+            "program": "${workspaceFolder}/src/Spoof.Exe.Console/bin/Debug/net6.0/Spoof.Exe.Console.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/src/spoof.exe.console",
+            "cwd": "${workspaceFolder}/src/Spoof.Exe.Console",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false

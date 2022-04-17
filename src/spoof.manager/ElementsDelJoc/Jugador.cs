@@ -30,6 +30,12 @@ public class Jugador : IJugador
         PotMostrarLaMa ?
         EnPorto :
         null;
+
+    public string GetNomAlgoritme()
+        =>
+        AlgoritmeSpoof
+        .GetNom();
+
     public int PartidesGuanyades { get; internal set; }
     internal IAlgoritmeSpoof AlgoritmeSpoof { get; }
     public bool? GuanyaLaRonda {get; set; }

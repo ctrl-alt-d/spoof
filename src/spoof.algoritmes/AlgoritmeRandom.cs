@@ -33,13 +33,13 @@ public class AlgoritmeRandom : IAlgoritmeSpoof
 
     public void SetIdJugador(string idJugador)
         =>
-        Console
-        .WriteLine($"Tinc el Id {idJugador}");
-
+        //Console
+        //.WriteLine($"Tinc el Id {idJugador}");
+        _ = 1;
     public void SetResultatPartida(IPandilla pandilla)
         =>
-        Console
-        .WriteLine("S'ha acabat la partida. M'apunto com ha anat.");
-
+        // Console
+        // .WriteLine("S'ha acabat la partida. M'apunto com ha anat.");
+        _ = 1;
 
 }

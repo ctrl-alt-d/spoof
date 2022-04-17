@@ -6,4 +6,5 @@ public interface IJugador
     int? GetEnPorto();
     int PartidesGuanyades { get; }
     bool? GuanyaLaRonda {get; }
+    string GetNomAlgoritme();
 }
