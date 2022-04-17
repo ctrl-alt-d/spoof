@@ -19,13 +19,13 @@ public class Jugador : IJugador
         =>
         EnPorto = AlgoritmeSpoof.PosaMonedesAlaMa();
     internal int? EnPorto {get; private set;}
-    public int? CrecQueEnTotalHiHaura {get; private set;}    
+    public virtual int? CrecQueEnTotalHiHaura {get; private set;}    
     public void FesPronostic(Pandilla pandilla)
         =>
         CrecQueEnTotalHiHaura = AlgoritmeSpoof.FesPronostic(pandilla);
     public string IdJugador = Guid.NewGuid().ToString();
     public bool PotMostrarLaMa {get; set;}
-    public int? GetEnPorto() 
+    public virtual int? GetEnPorto() 
         =>
         PotMostrarLaMa ?
         EnPorto :
