@@ -5,8 +5,9 @@ public class ProporcionadorDalgoritmes
 {
     public IEnumerable<IAlgoritmeSpoof> DonamAlgoritmes()
         =>
-        new [] {
+        new IAlgoritmeSpoof[] {
+            new AlgoritmeZero(),
+            new AlgoritmeUnaNeurona(),
             new AlgoritmeRandom(), // ToDo: Mirar dis l'assemblit tots els que implementin IAlgoritmeSpoof
-            new AlgoritmeRandom() // Li passo dos cops per a que lluitin entren ells
         };
 }

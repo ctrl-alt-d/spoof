@@ -22,6 +22,7 @@ public class App : IHostedService
         var pandilla = _Manegador.ExecutaElsAlgoritmes();
 
         Console.WriteLine($"Partides Jugades: {pandilla.PartidesJugades}");
+        Console.WriteLine($"Total Jugadors: {pandilla.Count()}");
 
         pandilla
         .OrderByDescending(j => j.PartidesGuanyades)

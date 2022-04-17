@@ -24,7 +24,7 @@ public class Pandilla : IPandilla
         =>
         Jugadors.Add(jugador);
 
-    internal void TornPassaAlSeguent()
+    public void TornPassaAlSeguent()
         =>
         Torn = (Torn + 1) % Jugadors.Count;
     
@@ -32,7 +32,7 @@ public class Pandilla : IPandilla
         =>
         Array.Empty<Jugador>()
         .Concat(Jugadors.Skip(Torn))
-        .Concat(Jugadors.Take(Torn - 1));
+        .Concat(Jugadors.Take(Torn));
 
     public IEnumerator<IJugador> GetEnumerator()
         =>
