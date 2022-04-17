@@ -71,7 +71,10 @@ public class ExecutorDePartida
             guanyador.GuanyaLaRonda=true;
         }
 
-        // Ja poden obrir la ma
+        // Hem jugat una altra partida
+        pandilla.PartidesJugades++;
+
+        // Ja poden obrir el puny
         pandilla
             .Jugadors
             .ForEach(jugador => {
@@ -82,6 +85,9 @@ public class ExecutorDePartida
         pandilla
             .Jugadors
             .ForEach(jugador => jugador.AlgoritmeSpoof.SetResultatPartida(pandilla));
+
+        // Comença el següent
+        pandilla.TornPassaAlSeguent();
 
     }
 

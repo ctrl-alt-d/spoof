@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spoof.abstrats", "spoof.abs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spoof.exe.console", "spoof.exe.console\spoof.exe.console.csproj", "{A90D48EC-A49A-4870-A2DB-04A1BB54301C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E6891B59-9BBD-4240-9375-833FDC12A411}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.spoof.manager.ElementsDelJoc", "Tests\Test.spoof.manager.ElementsDelJoc\Test.spoof.manager.ElementsDelJoc.csproj", "{1A7761D7-59C2-49D4-A002-DAED218E355C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,12 @@ Global
 		{A90D48EC-A49A-4870-A2DB-04A1BB54301C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A90D48EC-A49A-4870-A2DB-04A1BB54301C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A90D48EC-A49A-4870-A2DB-04A1BB54301C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A7761D7-59C2-49D4-A002-DAED218E355C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A7761D7-59C2-49D4-A002-DAED218E355C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A7761D7-59C2-49D4-A002-DAED218E355C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A7761D7-59C2-49D4-A002-DAED218E355C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1A7761D7-59C2-49D4-A002-DAED218E355C} = {E6891B59-9BBD-4240-9375-833FDC12A411}
 	EndGlobalSection
 EndGlobal
