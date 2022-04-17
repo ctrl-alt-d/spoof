@@ -18,10 +18,13 @@ public class ExecutorDePartida
         PosaMonedesAlesMans(pandilla);
 
         // Passa la poli per si algú fa el trol
-        _PoliciaDeTrols.DetectarTrols(pandilla);
+        _PoliciaDeTrols.VigilaElsTrolsMonedesAlPuny(pandilla);
 
         // Demanem pronòstic
         DemanarPronostic(pandilla);
+
+        // Torna a passar la poli per si algú fa el trol
+        _PoliciaDeTrols.VigilaElsTrolsPronosticRepetit(pandilla);
 
         // Determinem el guanyador
         var total_monedes = RecompteMonedes(pandilla);

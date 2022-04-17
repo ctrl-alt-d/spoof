@@ -35,8 +35,13 @@ public class Pandilla : IPandilla
 
     IEnumerator IEnumerable.GetEnumerator()
         =>
+        GetJugadorsPerOrdreDeTorn()
+        .GetEnumerator();
+    
+    internal IEnumerable<Jugador> GetJugadorsPerOrdreDeTorn()
+        =>
         Array.Empty<Jugador>()
         .Concat(Jugadors.Skip(Torn))
-        .Concat(Jugadors.Take(Torn - 1))
-        .GetEnumerator();
+        .Concat(Jugadors.Take(Torn - 1));
+
 }
